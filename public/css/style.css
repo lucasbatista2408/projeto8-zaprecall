@@ -1,209 +1,183 @@
+*{
+  box-sizing: border-box;
+}
+
 body{
-    background-color: 
-    #FB6B6B;
-    
-}
-.telaInicial{
-    height: 100vh;
-    font-family: 'Righteous', cursive;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  background-color: #FB6B6B;
 }
 
-.logoInicial{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.red{
+  background-color: red;
 }
 
-.logoGrande{
-    height: 65px;
-    width: 55px;
+.orange{
+  background-color: orange;
 }
 
-.tituloGrande{
-    font-size: 25px;
-    color: #FFFFFF;
+.green{
+  background-color: green;
+}
+.font-green{
+  color: green;
+  text-decoration: line-through;
+}
+.font-orange{
+  color: orange;
+  text-decoration: line-through;
+}
+.font-red{
+  color: red;
+  text-decoration: line-through;
 }
 
-.botaoInicial button{
-    height: 31px;
-    width: 141px;
-    font-family: 'Recursive', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    border-radius: 5px;
-    border: solid 1px #D70900;
-    color:#D70900
-
+/*Home*/
+.WelcomePage{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
-/* Tela2 */
-
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 19px;
-    margin-bottom: 41px;
+.WelcomeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-.logoPadrao{
-    height: 30px;
-    width: 26px;
+.WelcomeContent img{
+  width: 136px;
+  height: 160px;
+  margin-bottom: 26px;
 }
-
-.tituloPadrao{
-    padding: 0 7px;
-    font-family: 'Righteous', cursive;
-    font-size: 20px;
-    color: #FFFFFF;
+.WelcomeContent h1{
+  font-family: 'Righteous', cursive;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 30px;
 }
-
-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 110px;
+.WelcomeContent button{
+  font-family: 'Recursive', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: red;
+  border-radius: 5px;
+  border: 2px solid red;
+  width: 246px;
+  height: 54px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-nav button{
-    padding: 0;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    border: 0px;
-    font-family: 'Recursive', sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    border-radius: 5px;
+/* GameStart */
+.GameHeader{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 42px;
+  margin-bottom: 26px;
+}
+.GameHeader img{
+  width: 52px;
+  height: 60px;
+}
+.GameHeader h1{
+  font-size: 36px;
+  font-family: 'Righteous', cursive;
+  color: white;
+  margin-left: 20px;
+}
+.GameContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.GameStats{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.GameStats h1{
+  font-family: 'Recursive', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 
-.botaoPergunta{
-    height: 40px;
-    width: 182px;
-    background-color: #FFFFFF;
-    color:#333333;
-    font-family: 'Recursive', sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 0px;
-    padding: 1px 4px;
-    
+/*Question*/
+.QuestionHead{
+  margin-top: 26px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+  height: 66px;
+  background-color: white;
+}
+.QuestionHead h1{
+  margin-left: 16px;
+  font-family: 'Recursive', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.QuestionHead ion-icon{
+  margin: auto 10px auto 0;
+  font-size: 30px;
 }
 
-.card{
-    min-height: 120px;
-    width: 180px;
-    background-color: #FFFFD4;
-    font-family: 'Recursive', sans-serif;
-    font-weight: 400;
-    border-radius: 5px;
-    padding: 13px 6px 5px;
-    text-align: left;
-    position: relative;
-    margin: 0px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+/*CardQuestion*/
+.CardQuestion{
+  position: relative;
+  margin-top: 26px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 130px;
+  background-color: #FFFFD4;
+}
+.CardQuestion h1{
+  margin: 18px 0px 0px 16px;
+  font-family: 'Recursive', sans-serif;
+  font-size: 18px;
+}
+.CardQuestion img{
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  width: 30px;
+  height: 20px;
 }
 
-.setinha{
-    position:absolute;
-    right: 8px;
-    bottom: 7px;
+/*Alternatives*/
+.Alternatives{
+  font-family: 'Recursive', sans-serif;;
+  padding: 6px 13px;
+  position: relative;
+  margin-top: 26px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 130px;
+  background-color: #FFFFD4;
 }
-
-.botoes{
-    display: flex;
-    align-items:flex-end;
-    justify-content: space-evenly;
-    margin-top: 5px;
-    bottom: 0;
+.Alternatives .Buttons{
+  display: flex;
+  justify-content: space-between;
 }
-.nao-lembrei, .quase, .zap{
-    height: 24px;
-    width: 55px;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 7px;
-    color: #FFFFFF;
-}
-
-.nao-lembrei{background-color: #ff3030;}
-.quase{background-color: #ff922e;}
-.zap{background-color: #2fbe34;}
-
-
-footer{
-    height: 50px;
-    width: 100vw;
-    position: fixed;
-    bottom: 0px;
-    background-color: #ffffff;
-    font-family: 'Recursive', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-footer img{
-    margin-right: 6px;
-}
-
-.textoFinal{
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
-    
-}
-
-.icones-footer img{
-    margin-right: 2px;
-}
-
-@media (min-width: 400px){
-    .logoPadrao{
-        height: 40px;
-        width: 46px;
-    }
-    .tituloPadrao{
-        font-size: 32px;
-    }
-
-    .botaoPergunta{
-        height: 55px;
-        width: 340px;
-        font-size: 17px;
-    }
-    .botaoPergunta img{
-        height: 22px;
-        width: 22px;
-        margin-right: 5px;
-    }
-    .card{
-        width: 340px;
-        font-size: 17px;
-    }
-
-    .nao-lembrei, .quase, .zap{
-        height: 34px;
-        width: 85px;
-        font-size: 13px;
-    }
-
-    footer{
-        font-size: 19px;
-    }
-    
-
+.Alternatives .Buttons button{
+  font-family: 'Recursive', sans-serif;
+  color: white;
+  width: 86px;
+  height: 38px;
+  border-radius: 6px;
+  border: none;
 }
