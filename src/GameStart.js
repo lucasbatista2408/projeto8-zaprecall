@@ -29,7 +29,7 @@ export default function GameStart(){
             <img src={congrats} alt="party" />
             <h1>Parabéns!</h1>
           </div>
-            <p>Você não esqueceu de nenhum flashcard!</p>
+            <p>Você não esqueceu de <br/> nenhum flashcard!</p>
           </>
            : 
           <>
