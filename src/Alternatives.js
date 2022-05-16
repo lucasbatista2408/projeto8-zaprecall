@@ -1,11 +1,12 @@
 import React from "react"
-import GameStart from "./GameStart"
 
-export default function Alternatives({props, contador, setContador}){
+export default function Alternatives({alternativa, numero, contador, setContador, icon, setIcon, right, setRight}){
+
+  const newIcon = [...icon]
   
   const [resposta, setResposta] = React.useState(
   <div className="Alternatives">
-    <h1>{props.alternativa}</h1>
+    <h1>{alternativa}</h1>
     <div className="Buttons">
       <button onClick={Red} className="red">Não Lembrei</button>
       <button onClick={Orange} className="orange">Quase não lembrei</button>
@@ -14,20 +15,26 @@ export default function Alternatives({props, contador, setContador}){
   </div>)
 
   function Green(){
+    setRight(right+1)
     setContador(contador+1)
+    newIcon.push("checkmark-circle")
+    setIcon(newIcon)
     setResposta(
       <div className="QuestionHead"  >
-        <h1 className="font-green">{props.numero}</h1>
+        <h1 className="font-green">{numero}</h1>
         <ion-icon style={{color: "green"}} className="QuestionPlay" name="checkmark-circle"></ion-icon>
       </div>
     )
   }
 
   function Orange(){
+    setRight(right+1)
     setContador(contador+1)
+    newIcon.push("help-circle")
+    setIcon(newIcon)
     setResposta(
       <div className="QuestionHead"  >
-        <h1 className="font-orange">{props.numero}</h1>
+        <h1 className="font-orange">{numero}</h1>
         <ion-icon style={{color: "orange"}}className="QuestionPlay" name="help-circle"></ion-icon>
       </div>
     )
@@ -35,9 +42,11 @@ export default function Alternatives({props, contador, setContador}){
 
   function Red(){
     setContador(contador+1)
+    newIcon.push("close-circle")
+    setIcon(newIcon)
     setResposta(
       <div className="QuestionHead"  >
-        <h1 className="font-red">{props.numero}</h1>
+        <h1 className="font-red">{numero}</h1>
         <ion-icon style={{color: "red"}} className="QuestionPlay" name="close-circle"></ion-icon>
       </div>
     )

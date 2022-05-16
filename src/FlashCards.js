@@ -1,26 +1,8 @@
 import React from "react"
-import CardQuestion from "./CardQuestion";
+import FlashElement from "./FlashElement";
 
 
-export default function FlashCards({contador, setContador}){
-
-  function FlashElement(props) {
-    const [pergunta, setPergunta] = React.useState(false)
-
-    return (
-        <>
-            { pergunta === false ? 
-                <>
-                <div className="QuestionHead"  >
-                    <h1>{props.numero}</h1>
-                    <ion-icon onClick={() => {setPergunta(true)} } className="QuestionPlay" name="play-outline"  />
-                </div>
-                </> : <CardQuestion pergunta={props.perguntas.Title} alternativa={props.perguntas.Answer} numero={props.numero} contador={contador} setContador={setContador} />
-            }
-        </>
-    )
-}
-
+export default function FlashCards({contador, setContador, icon, setIcon, right, setRight}){
   const objQuestion = [
     {
         Option: "1",
@@ -59,7 +41,7 @@ export default function FlashCards({contador, setContador}){
 
   return(
     <>
-      {objQuestion.map((pergunta,index) => <FlashElement perguntas={pergunta} key={index} numero={`Pergunta ${index + 1}`}/>)}
+      {objQuestion.map((pergunta,index) => <FlashElement contador= {contador} setContador ={setContador} perguntas={pergunta} key={index} numero={`Pergunta ${index + 1}`} icon={icon} setIcon={setIcon} right={right} setRight={setRight} />)}
     </>
   )
 }
